@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "routeKey": "$default",
+  "rawPath": "/",
+  "rawQueryString": "",
+  "headers": {
+    "content-length": "23",
+    "x-amzn-tls-cipher-suite": "ECDHE-RSA-AES128-GCM-SHA256",
+    "x-amzn-tls-version": "TLSv1.2",
+    "x-amzn-trace-id": "Root=1-64a8373a-0582cf05027cb5367def00d2",
+    "x-forwarded-proto": "https",
+    "host": "mlmtzplhdet2ha3yvxuegcnhze0qepwh.lambda-url.us-east-1.on.aws",
+    "x-forwarded-port": "443",
+    "content-type": "application/json",
+    "x-forwarded-for": "88.130.212.139",
+    "accept": "*/*",
+    "user-agent": "curl/7.88.1"
+  },
+  "requestContext": {
+    "accountId": "anonymous",
+    "apiId": "mlmtzplhdet2ha3yvxuegcnhze0qepwh",
+    "domainName": "mlmtzplhdet2ha3yvxuegcnhze0qepwh.lambda-url.us-east-1.on.aws",
+    "domainPrefix": "mlmtzplhdet2ha3yvxuegcnhze0qepwh",
+    "http": {
+      "method": "POST",
+      "path": "/",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "88.130.212.139",
+      "userAgent": "curl/7.88.1"
+    },
+    "requestId": "aee43e64-f671-4751-8ca4-767732471c09",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "07/Jul/2023:16:03:06 +0000",
+    "timeEpoch": 1688745786867
+  },
+  "body": "{\"cuisine\": \"german\",\"text\":\"What is green?\"}",
+  "isBase64Encoded": false
+}
