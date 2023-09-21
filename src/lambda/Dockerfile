@@ -23,10 +23,10 @@ RUN mkdir -p ${FUNCTION_DIR}
 
 # Copy function code
 COPY main.py ${FUNCTION_DIR}
-# COPY modelfile.bin /opt/modelfile.bin
-# COPY ggml-alpaca-7b-q4.bin /opt/
-# COPY ggml-model-q4_0.bin /opt/modelfile.bin
-COPY llama-2-7b.Q4_0.gguf /opt/modelfile.bin
+COPY models/llama-2-7b.Q4_0.gguf /opt/modelfile.bin
+# COPY models/llama-2-7b.Q8_0.gguf /opt/modelfile.bin
+# COPY models/mythalion-13b.Q4_0.gguf /opt/modelfile.bin
+# COPY models/mythalion-13b.Q4_0.gguf /opt/modelfile.bin
 # Install the runtime interface client
 RUN pip3 install \
     # --target ${FUNCTION_DIR} \

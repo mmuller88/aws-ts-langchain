@@ -4,6 +4,8 @@ This is the demo Repo for the AWS TS Language Chain Meetup in Lisbon. It uses th
 
 This Repo uses [Projen](https://github.com/projen/projen) for the project setup. Get familiar with it to understand the repo.
 
+I have a recording on the AWS AI LangChain talk on Youtube. Feel free to watch it :) https://www.youtube.com/watch?v=PwvVkdpb1As
+
 ## Bootstrap
 
 ```bash
@@ -35,7 +37,7 @@ Those two prompts are chained and will return the name for the restaurant and su
 URL=https://mlmtzplhdet2ha3yvxuegcnhze0qepwh.lambda-url.us-east-1.on.aws
 curl -X POST $URL \
     -H 'Content-type: application/json' \
-    -d '{"cuisine": "German"}' | jq .
+    -d '{"cuisine": "Spain"}' | jq .
 ```
 
 ## Second LangChain App
@@ -48,7 +50,7 @@ Prompt: I want to open a restaurant for {cuisine} food. Suggest a fancy name for
 URL=https://a5ewfijwkvfgrptv7z336cnfvm0yxawl.lambda-url.us-east-1.on.aws
 curl -X POST $URL \
     -H 'Content-type: application/json' \
-    -d '{"cuisine": "Italien", "user": "martin"}' | jq .
+    -d '{"cuisine": "French", "user": "martin"}' | jq .
 ```
 
 ## Third LangChain run LLM locally
@@ -60,29 +62,18 @@ I downloaded a gguf model from huggingface and stored it in src/lambda like this
 
 ```bash
 URL=https://vwoljomx7sjgdyziy5eiybk5oy0tsvrz.lambda-url.us-east-1.on.aws/prompt?cuisine=Italien
-curl -X POST $URL | jq .
+curl $URL | jq .
 ```
+
+### Improvements
+
+The Lambda needs to be kept warm for serving the response faster.
 
 ### Thanks
 
 A huge thanks to [Sean Bailey](https://github.com/sean-bailey) for making the pioneer work for running Llama 2 models on AWS Lambda.
 
-### Improvement Ideas
-
-- Make the model fetching dynamic
-
-## Example queries
-
-```bash
-URL=https://mlmtzplhdet2ha3yvxuegcnhze0qepwh.lambda-url.us-east-1.on.aws
-
-
-## What to improve
-
-* Use proper AWS Api-Gateway for a proper REST API
-
 ## Thx
 
-* Thanks to codebasics to provide the Python LangChain Video which I used <https://www.youtube.com/watch?v=nAmC7SoVLd8>
-* Thanks to Coding Crashcourses for another LangChain Tutorial video helping me to understand the LangChain features https://www.youtube.com/watch?v=a89vqgK-Qcs
-```
+- Thanks to codebasics to provide the Python LangChain Video which I used <https://www.youtube.com/watch?v=nAmC7SoVLd8>
+- Thanks to Coding Crashcourses for another LangChain Tutorial video helping me to understand the LangChain features https://www.youtube.com/watch?v=a89vqgK-Qcs

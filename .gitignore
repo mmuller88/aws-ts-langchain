@@ -31,7 +31,8 @@ jspm_packages/
 .yarn-integrity
 .cache
 src/lambda/dist
-src/lambda/llama-2-7b.Q4_0.gguf
+src/lambda/models/
+src/models/
 !/.projenrc.js
 /test-reports/
 junit.xml

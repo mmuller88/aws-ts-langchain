@@ -77,28 +77,6 @@ export class LangchainStack extends core.Stack {
       },
     );
 
-    // const langChainLocalLambda = new nodejs.NodejsFunction(this, 'local', {
-    //   timeout: core.Duration.seconds(30),
-    //   memorySize: 5120,
-    //   bundling: {
-    //     commandHooks: {
-    //       beforeBundling(inputDir: string, outputDir: string): string[] {
-    //         return [
-    //           'pwd',
-    //           'ls -la',
-    //           `cp -r ${inputDir}/ggml-alpaca-7b-q4.bin ${outputDir}/ggml-alpaca-7b-q4.bin`,
-    //         ]; //adjust here
-    //       },
-    //       afterBundling(_inputDir: string, _outputDir: string): string[] {
-    //         return [];
-    //       },
-    //       beforeInstall(_inputDir: string, _outputDir: string): string[] {
-    //         return [];
-    //       },
-    //     },
-    //   },
-    // });
-
     const functionLocalUrl = langChainLocalLambda.addFunctionUrl({
       authType: lambda.FunctionUrlAuthType.NONE,
     });

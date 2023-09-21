@@ -27,6 +27,6 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
-  gitignore: ['src/lambda/dist', 'src/lambda/llama-2-7b.Q4_0.gguf'],
+  gitignore: ['src/lambda/dist', 'src/lambda/models/', 'src/models/'],
 });
 project.synth();
