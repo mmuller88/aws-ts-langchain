@@ -37,7 +37,7 @@ Those two prompts are chained and will return the name for the restaurant and su
 URL=https://mlmtzplhdet2ha3yvxuegcnhze0qepwh.lambda-url.us-east-1.on.aws
 curl -X POST $URL \
     -H 'Content-type: application/json' \
-    -d '{"cuisine": "Spain"}' | jq .
+    -d '{"cuisine": "Catalan"}' | jq .
 ```
 
 ## Second LangChain App
@@ -50,7 +50,7 @@ Prompt: I want to open a restaurant for {cuisine} food. Suggest a fancy name for
 URL=https://a5ewfijwkvfgrptv7z336cnfvm0yxawl.lambda-url.us-east-1.on.aws
 curl -X POST $URL \
     -H 'Content-type: application/json' \
-    -d '{"cuisine": "French", "user": "martin"}' | jq .
+    -d '{"cuisine": "German", "user": "martin"}' | jq .
 ```
 
 ## Third LangChain run LLM locally

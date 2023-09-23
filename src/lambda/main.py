@@ -31,7 +31,7 @@ async def prompt(
     try:
         # " Below is an instruction that describes a task, as well as any previous text you have generated. You must continue where you left off if there is text following Previous Output. Write a response that appropriately completes the request. When you are finished, write [[COMPLETE]].\n\n Instruction: "+text+" Previous output: "+prioroutput+" Response:", repeat_penalty=penalty, echo=False, max_tokens=tokencount)
         output = llm(
-            "Below is an instruction that describes a task, as well as any previous text you have generated. You must continue where you left off if there is text following Previous Output. Write a response that appropriately completes the request. When you are finished, write [[COMPLETE]].\n\n Instruction: I want to open a restaurant for "+cuisine+" food. Suggest a fancy name for this. Response:", repeat_penalty=penalty, echo=False, max_tokens=tokencount)
+            "Below is an instruction that describes a task. Write a response that appropriately answers the request. \n\n Instruction: I want to open a restaurant for "+cuisine+" food. Suggest a fancy name for this. Response:", repeat_penalty=penalty, echo=False, max_tokens=tokencount)
         returndict['returnmsg'] = output['choices'][0]['text']
 
     except Exception as e:
